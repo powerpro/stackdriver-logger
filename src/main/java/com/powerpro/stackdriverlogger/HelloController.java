@@ -2,7 +2,7 @@ package com.powerpro.stackdriverlogger;
 
 import lombok.extern.slf4j.Slf4j;
 
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
@@ -12,9 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 
 @Slf4j
 @RestController
-public class LogController {
+public class HelloController {
 
-    @RequestMapping
+    @GetMapping
     public Map<String, String> hello(HttpServletRequest request) {
         RequestLogger requestLogger = RequestLogger.builder()
             .includeClientInfo(true)

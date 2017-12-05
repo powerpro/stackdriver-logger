@@ -1,0 +1,5 @@
+management:
+  contextPath: /_ah
+  health:
+    diskspace:
+      enabled: false

@@ -1,0 +1,19 @@
+service: stackdriver-logger
+env: flex
+threadsafe: true
+
+env_variables:
+  DBG_ENABLE: true
+
+# This should get us n1-standard-1 instances
+# https://cloud.google.com/appengine/docs/flexible/java/configuring-your-app-with-app-yaml#resource-settings
+# https://cloud.google.com/compute/docs/machine-types
+resources:
+  memory_gb: 2.0
+
+automatic_scaling:
+  min_num_instances: 1
+
+handlers:
+- url: /.*
+  script: this field is required, but ignored

@@ -1,4 +1,5 @@
 service: stackdriver-logger
+runtime: java
 env: flex
 threadsafe: true
 

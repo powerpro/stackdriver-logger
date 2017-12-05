@@ -24,7 +24,7 @@ public class HelloController {
 
         Map<String, String> info = new HashMap<>();
         info.put("threadId", Long.toString(Thread.currentThread().getId()));
-        info.put("traceId", (String) request.getAttribute("x-cloud-trace-context"));
+        info.put("traceId", (String) request.getAttribute(TraceIdLoggingHandlerInterceptor.TRACE_ID_ATTR));
         log.debug("\n==========INFO===========\n{}\n", info);
         return info;
     }
